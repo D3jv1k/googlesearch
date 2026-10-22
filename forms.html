@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Form Elements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="forms-page">
+    <nav class="top-nav" aria-label="Project pages">
+        <a href="index.html">Google Search</a>
+        <a href="images.html">Images</a>
+        <a href="advanced.html">Advanced Search</a>
+    </nav>
+
+    <main class="forms-main">
+        <h1>Form Elements</h1>
+        <p class="forms-intro">A showcase of common HTML form controls. This sample form does not collect or store your information.</p>
+
+        <form class="demo-form">
+            <fieldset class="demo-group">
+                <legend>Text and contact</legend>
+                <label class="demo-control" for="demo-name">Text
+                    <input id="demo-name" type="text" placeholder="Your name">
+                </label>
+                <label class="demo-control" for="demo-search">Search
+                    <input id="demo-search" type="search" placeholder="Search terms">
+                </label>
+                <label class="demo-control" for="demo-email">Email
+                    <input id="demo-email" type="email" placeholder="name@example.com">
+                </label>
+                <label class="demo-control" for="demo-url">Website
+                    <input id="demo-url" type="url" placeholder="https://example.com">
+                </label>
+                <label class="demo-control" for="demo-phone">Telephone
+                    <input id="demo-phone" type="tel" placeholder="+1 555 0100">
+                </label>
+                <label class="demo-control" for="demo-password">Password
+                    <input id="demo-password" type="password" autocomplete="new-password">
+                </label>
+            </fieldset>
+
+            <fieldset class="demo-group">
+                <legend>Numbers and dates</legend>
+                <label class="demo-control" for="demo-number">Number
+                    <input id="demo-number" type="number" min="0" max="100" value="25">
+                </label>
+                <label class="demo-control" for="demo-range">Range
+                    <input id="demo-range" type="range" min="0" max="100" value="50">
+                </label>
+                <label class="demo-control" for="demo-date">Date
+                    <input id="demo-date" type="date">
+                </label>
+                <label class="demo-control" for="demo-time">Time
+                    <input id="demo-time" type="time">
+                </label>
+                <label class="demo-control" for="demo-month">Month
+                    <input id="demo-month" type="month">
+                </label>
+                <label class="demo-control" for="demo-week">Week
+                    <input id="demo-week" type="week">
+                </label>
+                <label class="demo-control" for="demo-color">Color
+                    <input id="demo-color" type="color" value="#1a73e8">
+                </label>
+            </fieldset>
+
+            <fieldset class="demo-group">
+                <legend>Choices and selection</legend>
+                <span class="demo-control">Checkboxes</span>
+                <div class="choice-list">
+                    <label><input type="checkbox" name="interests" value="design"> Design</label>
+                    <label><input type="checkbox" name="interests" value="code"> Code</label>
+                    <label><input type="checkbox" name="interests" value="writing"> Writing</label>
+                </div>
+                <span class="demo-control">Radio buttons</span>
+                <div class="choice-list">
+                    <label><input type="radio" name="contact" value="email"> Email</label>
+                    <label><input type="radio" name="contact" value="phone"> Phone</label>
+                    <label><input type="radio" name="contact" value="none"> No preference</label>
+                </div>
+                <label class="demo-control" for="demo-select">Select
+                    <select id="demo-select" name="category">
+                        <option value="">Choose a category</option>
+                        <optgroup label="Creative">
+                            <option value="art">Art</option>
+                            <option value="music">Music</option>
+                        </optgroup>
+                        <optgroup label="Technology">
+                            <option value="web">Web</option>
+                            <option value="data">Data</option>
+                        </optgroup>
+                    </select>
+                </label>
+                <label class="demo-control" for="demo-list">Datalist
+                    <input id="demo-list" type="text" list="demo-options" placeholder="Pick or type">
+                    <datalist id="demo-options">
+                        <option value="HTML"></option>
+                        <option value="CSS"></option>
+                        <option value="JavaScript"></option>
+                    </datalist>
+                </label>
+            </fieldset>
+
+            <fieldset class="demo-group">
+                <legend>Files and comments</legend>
+                <label class="demo-control" for="demo-file">File upload
+                    <input id="demo-file" type="file">
+                </label>
+                <label class="demo-control" for="demo-message">Textarea
+                    <textarea id="demo-message" name="message" placeholder="Write a message"></textarea>
+                </label>
+                <span class="demo-control">Hidden value (not visible)</span>
+                <input type="hidden" name="demo-hidden" value="Hidden example">
+            </fieldset>
+
+            <div class="demo-actions">
+                <button type="button">Submit button (demo)</button>
+                <button type="reset">Reset fields</button>
+                <button type="button">Button example</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fd3jv1k.github.io%2Fgooglesearch%2Fforms.html">Validate HTML</a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fd3jv1k.github.io%2Fgooglesearch%2Fstyles.css">Validate CSS</a>
+        <a href="https://github.com/D3jv1k/googlesearch/blob/main/citace.md">Sources &amp; citations</a>
+    </footer>
+</body>
+</html>
