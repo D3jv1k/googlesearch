@@ -117,6 +117,21 @@ a:hover {
     letter-spacing: 0;
 }
 
+.demo-notice {
+    max-width: 584px;
+    margin: 22px 0 0;
+    color: #5f6368;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.advanced-notice {
+    max-width: 900px;
+    margin: 20px 40px 0;
+    text-align: left;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -351,6 +366,11 @@ a:hover {
 
     .advanced-form {
         margin: 0 20px;
+    }
+
+    .advanced-notice {
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
     .advanced-row {
