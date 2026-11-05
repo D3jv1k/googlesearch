@@ -382,3 +382,474 @@ a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+body {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+    background:
+        radial-gradient(ellipse at 50% 42%, rgb(39 71 133 / 28%), transparent 48%),
+        linear-gradient(145deg, #080d1a 0%, #101a31 55%, #0b1222 100%);
+    color: #edf3ff;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+body::before {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(1px 1px at 12% 20%, rgb(255 255 255 / 90%) 50%, transparent 100%),
+        radial-gradient(1px 1px at 78% 16%, rgb(255 255 255 / 70%) 50%, transparent 100%),
+        radial-gradient(2px 2px at 88% 73%, rgb(163 201 255 / 80%) 50%, transparent 100%),
+        radial-gradient(1px 1px at 24% 82%, rgb(255 255 255 / 75%) 50%, transparent 100%),
+        radial-gradient(1px 1px at 62% 91%, rgb(255 255 255 / 70%) 50%, transparent 100%);
+    content: "";
+    inset: 0;
+}
+
+.top-nav,
+.search-home,
+.site-footer,
+.advanced-header,
+.advanced-page main,
+.forms-main {
+    position: relative;
+    z-index: 1;
+}
+
+.top-nav {
+    min-height: 72px;
+    gap: 12px;
+    padding: 0 34px;
+    color: #c4d2ec;
+    font-size: 13px;
+}
+
+.top-nav a {
+    padding: 9px 13px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.top-nav a:hover {
+    border-color: rgb(135 177 255 / 30%);
+    background: rgb(132 171 241 / 10%);
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-home {
+    width: min(100% - 32px, 920px);
+    min-height: 570px;
+    flex: 1;
+    justify-content: center;
+    align-self: center;
+    margin: 0 auto 36px;
+    padding: 68px 28px;
+    border: 1px solid rgb(158 191 255 / 17%);
+    border-radius: 28px;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgb(71 111 191 / 15%), transparent 60%),
+        rgb(10 17 33 / 62%);
+    box-shadow: 0 24px 80px rgb(0 0 0 / 28%), inset 0 1px rgb(255 255 255 / 4%);
+    text-align: center;
+}
+
+.wordmark {
+    margin-bottom: 38px;
+    color: #f0f5ff;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: clamp(68px, 12vw, 92px);
+    font-weight: 700;
+    letter-spacing: -7px;
+    text-shadow: 0 0 32px rgb(130 173 255 / 30%);
+}
+
+.wordmark .blue,
+.wordmark .red,
+.wordmark .yellow,
+.wordmark .green,
+.mini-wordmark .blue,
+.mini-wordmark .red,
+.mini-wordmark .yellow,
+.mini-wordmark .green {
+    color: inherit;
+}
+
+.wordmark::after {
+    display: block;
+    margin-top: 14px;
+    color: #8fa9d1;
+    content: "SEARCH BEYOND THE ORDINARY";
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-shadow: none;
+}
+
+.image-caption {
+    right: -48px;
+    bottom: 22px;
+    color: #8fc9ff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.search-form {
+    width: min(100%, 620px);
+}
+
+.search-box {
+    height: 58px;
+    padding: 0 24px;
+    border: 1px solid rgb(155 183 230 / 30%);
+    border-radius: 18px;
+    background: rgb(6 12 25 / 78%);
+    color: #f3f7ff;
+    box-shadow: inset 0 1px 8px rgb(0 0 0 / 20%);
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.search-box:hover,
+.search-box:focus {
+    border-color: #83b9ff;
+    background: #0a1428;
+    box-shadow: 0 0 0 4px rgb(105 164 255 / 12%), 0 0 28px rgb(77 135 231 / 14%);
+}
+
+.search-buttons {
+    gap: 14px;
+    margin-top: 23px;
+}
+
+.search-buttons input,
+.advanced-submit input {
+    min-height: 42px;
+    padding: 0 19px;
+    border: 1px solid rgb(134 176 248 / 44%);
+    border-radius: 12px;
+    background: #23395f;
+    color: #edf4ff;
+    font-family: inherit;
+    font-size: 13px;
+    transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.search-buttons input:hover,
+.advanced-submit input:hover {
+    transform: translateY(-1px);
+    border-color: #a8ccff;
+    background: #2e4d7e;
+    box-shadow: none;
+}
+
+.demo-notice {
+    max-width: 590px;
+    margin-top: 28px;
+    color: #93a6c5;
+    font-size: 12px;
+}
+
+.site-footer {
+    gap: 26px;
+    margin-top: auto;
+    border-top: 1px solid rgb(149 176 220 / 14%);
+    background: rgb(5 10 20 / 30%);
+    color: #8fa1bd;
+}
+
+.site-footer a:hover {
+    color: #dceaff;
+}
+
+.advanced-header {
+    height: 72px;
+    border-bottom-color: rgb(149 176 220 / 14%);
+}
+
+.mini-wordmark {
+    color: #eaf2ff;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    letter-spacing: -1px;
+    text-shadow: 0 0 18px rgb(130 173 255 / 25%);
+}
+
+.advanced-page h1 {
+    color: #ff9a8d;
+}
+
+.advanced-form h2,
+.advanced-row {
+    color: #d8e4f8;
+}
+
+.advanced-row input,
+.demo-control input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
+.demo-control select,
+.demo-control textarea {
+    border-color: rgb(155 183 230 / 30%);
+    border-radius: 8px;
+    background: #0a1428;
+    color: #edf3ff;
+}
+
+.advanced-row input:focus,
+.demo-control input:focus,
+.demo-control select:focus,
+.demo-control textarea:focus {
+    border-color: #83b9ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(105 164 255 / 14%);
+}
+
+.advanced-submit input,
+.demo-actions button[type="submit"] {
+    border-color: #547fbd;
+    background: #294873;
+    color: #fff;
+}
+
+.forms-page {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgb(39 71 133 / 24%), transparent 55%),
+        linear-gradient(145deg, #080d1a 0%, #101a31 55%, #0b1222 100%);
+}
+
+.forms-main {
+    flex: 1;
+}
+
+.forms-main h1,
+.demo-group legend,
+.demo-control,
+.choice-list {
+    color: #edf3ff;
+}
+
+.forms-intro {
+    color: #a5b5d0;
+}
+
+.demo-group {
+    border-color: rgb(155 183 230 / 22%);
+    border-radius: 14px;
+    background: rgb(10 17 33 / 75%);
+}
+
+.demo-actions button {
+    border-color: rgb(155 183 230 / 30%);
+    border-radius: 9px;
+    background: #172541;
+    color: #edf3ff;
+}
+
+.demo-actions button:hover {
+    border-color: #83b9ff;
+    background: #22395f;
+}
+
+@media (max-width: 600px) {
+    .top-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 12px;
+    }
+
+    .search-home {
+        min-height: 490px;
+        margin-bottom: 20px;
+        padding: 58px 18px;
+        border-radius: 20px;
+    }
+
+    .wordmark {
+        letter-spacing: -5px;
+    }
+
+    .wordmark::after {
+        letter-spacing: 2px;
+    }
+
+    .image-caption {
+        right: -37px;
+        bottom: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 50% 36%, rgb(91 28 37 / 24%), transparent 48%),
+        linear-gradient(145deg, #100d10 0%, #21171b 54%, #100d10 100%);
+    color: #eee3d2;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body::before {
+    background-image:
+        radial-gradient(ellipse at 15% 80%, rgb(122 49 43 / 9%), transparent 38%),
+        radial-gradient(ellipse at 85% 22%, rgb(151 112 56 / 8%), transparent 34%),
+        repeating-linear-gradient(115deg, transparent 0 90px, rgb(232 206 160 / 2%) 91px, transparent 92px 180px);
+}
+
+.top-nav {
+    color: #cabb9e;
+}
+
+.top-nav a:hover {
+    border-color: rgb(190 151 88 / 35%);
+    background: rgb(190 151 88 / 9%);
+    color: #f5e8ca;
+}
+
+.search-home {
+    border-color: rgb(183 145 82 / 22%);
+    background:
+        radial-gradient(ellipse at 50% 0%, rgb(113 54 46 / 18%), transparent 60%),
+        rgb(18 14 16 / 78%);
+    box-shadow: 0 24px 80px rgb(0 0 0 / 44%), inset 0 1px rgb(255 235 194 / 4%);
+}
+
+.wordmark {
+    color: #e9dcc2;
+    text-shadow: 0 0 32px rgb(186 128 65 / 23%);
+}
+
+.wordmark::after {
+    color: #b19a74;
+    content: "SEEK WHAT LIES BEYOND";
+}
+
+.image-caption {
+    color: #c6a86e;
+}
+
+.search-box {
+    border-color: rgb(183 145 82 / 32%);
+    background: rgb(12 10 11 / 88%);
+    color: #f3e8d4;
+}
+
+.search-box:hover,
+.search-box:focus {
+    border-color: #c6a86e;
+    background: #171112;
+    box-shadow: 0 0 0 4px rgb(190 151 88 / 10%), 0 0 28px rgb(100 47 39 / 18%);
+}
+
+.search-buttons input,
+.advanced-submit input {
+    border-color: rgb(181 137 70 / 48%);
+    background: #493126;
+    color: #f0dfbd;
+}
+
+.search-buttons input:hover,
+.advanced-submit input:hover {
+    border-color: #d3b77f;
+    background: #63422d;
+}
+
+.demo-notice {
+    color: #a99a84;
+}
+
+.site-footer {
+    border-top-color: rgb(183 145 82 / 15%);
+    background: rgb(12 10 11 / 36%);
+    color: #aa9b83;
+}
+
+.site-footer a:hover {
+    color: #f0dfbd;
+}
+
+.advanced-header {
+    border-bottom-color: rgb(183 145 82 / 15%);
+}
+
+.mini-wordmark {
+    color: #e9dcc2;
+    text-shadow: 0 0 18px rgb(186 128 65 / 20%);
+}
+
+.advanced-page h1 {
+    color: #c87463;
+}
+
+.advanced-form h2,
+.advanced-row {
+    color: #e1d3bd;
+}
+
+.advanced-row input,
+.demo-control input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
+.demo-control select,
+.demo-control textarea {
+    border-color: rgb(183 145 82 / 28%);
+    background: #171112;
+    color: #eee3d2;
+}
+
+.advanced-row input:focus,
+.demo-control input:focus,
+.demo-control select:focus,
+.demo-control textarea:focus {
+    border-color: #c6a86e;
+    box-shadow: 0 0 0 3px rgb(190 151 88 / 12%);
+}
+
+.advanced-submit input,
+.demo-actions button[type="submit"] {
+    border-color: #8d6940;
+    background: #493126;
+    color: #f0dfbd;
+}
+
+.forms-page {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgb(91 28 37 / 20%), transparent 55%),
+        linear-gradient(145deg, #100d10 0%, #21171b 54%, #100d10 100%);
+}
+
+.forms-main h1,
+.demo-group legend,
+.demo-control,
+.choice-list {
+    color: #eee3d2;
+}
+
+.forms-intro {
+    color: #b4a58f;
+}
+
+.demo-group {
+    border-color: rgb(183 145 82 / 20%);
+    background: rgb(18 14 16 / 82%);
+}
+
+.demo-actions button {
+    border-color: rgb(183 145 82 / 28%);
+    background: #21191a;
+    color: #eee3d2;
+}
+
+.demo-actions button:hover {
+    border-color: #c6a86e;
+    background: #332321;
+}
